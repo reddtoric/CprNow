@@ -1,10 +1,29 @@
 # CPR Now
 
-Chest compression-only CPR assistant for mobile. Audio and visual cues and 100-120 CPM settings.
+Chest compression-only CPR assistant for mobile.
+
+**Features:**
+
+- 100-120 cpm setting
+- Visual and audio cues
+- CPR check list
+- Compression depth reminder
+- Completely offline
+- Last 10 start-end time
+- Auto sets phone volume so audio cue is heard while giving CPR
+- Auto sets phone's volume back to user's volume setting when app is closed or paused
 
 <a href='https://play.google.com/store/apps/details?id=com.eddevs.cprnow&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width="250px" /></a>
 
 Google Play and the Google Play logo are trademarks of Google LLC.
+
+## Screenshots
+
+<p float="left">
+  <img src="/images/1 check list.png" alt="CPR check list" width="200px" />
+  <img src="/images/2 ui.png" alt="Main page: CPR cpm/bpm timer" width="200px" />
+  <img src="/images/4 cues.png" alt="CPR timer started and screenshotted on beat" width="200px" />
+</p>
 
 ## Frameworks/Libraries used
 

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CprNow.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Global Styles-->
+            <Color x:Key="Primary">#cc0000</Color>
+            <Color x:Key="DarkTextColor">#000000</Color>
+            <Color x:Key="LightTextColor">#ffffff</Color>
+
+            <Style TargetType="NavigationPage">
+                <!-- Title bar -->
+                <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="BarTextColor" Value="{StaticResource LightTextColor}" />
+            </Style>
+            
+            <Style x:Key="Separator" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="Color" Value="Gray" />
+                <Setter Property="Margin" Value="0, 8, 0, 8" />
+                <Setter Property="Opacity" Value="0.5" />
+            </Style>
+
+            <Style x:Key="SettingsTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="{StaticResource DarkTextColor}" />
+            </Style>
+
+            <Style x:Key="SettingsDescriptionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#262626" />
+            </Style>
+
+            <Style x:Key="SliderStyle" TargetType="Slider">
+                <Setter Property="Margin" Value="0,10" />
+                <Setter Property="MinimumTrackColor" Value="{StaticResource Primary}" />
+                <Setter Property="MaximumTrackColor" Value="Black" />
+                <Setter Property="ThumbColor" Value="{StaticResource Primary}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>

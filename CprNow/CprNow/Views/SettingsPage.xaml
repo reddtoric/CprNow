@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CprNow.Views.SettingsPage"
+             xmlns:vm="clr-namespace:CprNow.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:SettingsViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView BackgroundColor="White">
+        <StackLayout Padding="16">
+            <!-- Disclaimer -->
+            <Label Text="Disclaimer"
+                   Style="{StaticResource SettingsTitleStyle}" />
+            <Label Text="The information provided in this application is not a substitute for professional healthcare advice.&#10;&#10;Ed Devs is not responsible or liable for any mishaps, reliability issues, or accuracy issues from using this app.&#10;&#10;Please familiarize and verify this app before using in an actual chest compression-only CPR situation."
+                   Style="{StaticResource SettingsDescriptionStyle}" 
+                   FontSize="16"/>
+
+            <BoxView Style="{StaticResource Separator}" />
+
+            <!-- Auto set volume -->
+            <Label Text="Auto-set volume"
+                   Style="{StaticResource SettingsTitleStyle}" />
+            <Label Text="Volume to auto-set on app startup"
+                   Style="{StaticResource SettingsDescriptionStyle}" />
+            <Slider Maximum="100"
+                    Value="{Binding AutoSetVolume}"
+                    DragStarted="Slider_DragStarted"
+                    Minimum="0"
+                    Style="{StaticResource SliderStyle}" />
+
+            <BoxView Style="{StaticResource Separator}" />
+
+            <!-- CPM -->
+            <Label Text="Compressions Per Minute"
+                   Style="{StaticResource SettingsTitleStyle}" />
+            <Slider Maximum="120"
+                    Value="{Binding Cpm}"
+                    Minimum="100"
+                    Style="{StaticResource SliderStyle}" />
+            <Label Text="{Binding CpmLabel}"
+                   HorizontalOptions="Center"
+                   TextColor="{StaticResource DarkTextColor}" />
+
+            <BoxView Style="{StaticResource Separator}" />
+
+            <!-- About -->
+            <!--
+            <Button Text="About"
+                Clicked="Button_Clicked"
+                BackgroundColor="#e6e6e6"
+                Margin="0,8" />
+            -->
+            <!-- Help -->
+            <!--
+            <Button Text="Help"
+                Clicked="Button_Clicked"
+                BackgroundColor="#e6e6e6"
+                Margin="0,8" />
+            -->
+
+            <!--
+            <BoxView Style="{StaticResource Separator}" />
+            -->
+
+            <!-- Start History -->
+            <Label Text="Start-End History"
+                   Style="{StaticResource SettingsTitleStyle}" />
+            <Label Text="Last 10 start-end history with the most recent first"
+                   Style="{StaticResource SettingsDescriptionStyle}" />
+
+            <ListView ItemsSource="{Binding StartEndHistory}"
+                      SelectionMode="None"
+                      InputTransparent="False"
+                      HeightRequest="309"
+                      RowHeight="30">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding}" 
+                                   TextColor="Black" 
+                                   FontSize="16"
+                                   VerticalTextAlignment="Center"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

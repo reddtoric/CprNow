@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CprNow.Views.HomePage"
+             xmlns:vm="clr-namespace:CprNow.ViewModels"
+             Title="CPR Now">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- CPM -->
+        <ContentView>
+            <Label FontSize="24"
+                   TextColor="{StaticResource DarkTextColor}"
+                   Padding="16,4,16,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="CPM:&#10;" />
+                            <Span Text="{Binding Cpm}" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </ContentView>
+
+        <!-- Start Time -->
+        <ContentView Grid.Column="1">
+            <Label FontSize="24"
+                   TextColor="{StaticResource DarkTextColor}"
+                   Padding="16,4,16,0"
+                   HorizontalTextAlignment="End">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Latest start:&#10;" />
+                            <Span Text="{Binding LatestStartTime}" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </ContentView>
+        
+
+        <!-- Chest Image -->
+        <ContentView  Grid.Row="1"
+                      Grid.ColumnSpan="2"
+                      Padding="16,2,16,4"
+                      VerticalOptions="FillAndExpand">
+            <Image Source="chest_vector.png" 
+                   VerticalOptions="CenterAndExpand" />
+        </ContentView>
+
+        <!-- Hands Image -->
+        <AbsoluteLayout Grid.Row="1"
+                        Grid.ColumnSpan="2" 
+                        HorizontalOptions="CenterAndExpand" 
+                        VerticalOptions="CenterAndExpand">
+            <ContentView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                         AbsoluteLayout.LayoutFlags="All" 
+                         Padding="16,2,16,4">
+                <Image Source="cpr_hands_thick_black.png"
+                       Scale="{Binding HandsScale}"/>
+            </ContentView>
+        </AbsoluteLayout>
+
+        <Label Grid.Row="1"
+               Grid.ColumnSpan="2"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="End"
+               Text="PRESS" 
+               FontSize="45"
+               FontAttributes="Bold"
+               TextColor="{StaticResource DarkTextColor}" 
+               IsVisible="{Binding PressVisible}"/>
+
+        <!-- Compression depth reminder -->
+        <ContentView Grid.Row="2"
+                     Grid.ColumnSpan="2">
+            <Label FontSize="20"
+                   TextColor="{StaticResource DarkTextColor}"
+                   Padding="16,4,16,4"
+                   HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Compression depth:&#10;2 inches / 5 cm / 2 quarters" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </ContentView>
+
+        <!-- Toggle Button -->
+        <ContentView Grid.Row="3"
+                     Grid.ColumnSpan="2">
+            <Button Margin="8,0,8,8" x:Name="TestingButton"
+                    Text="{Binding ToggleButtonLabel}"
+                    FontSize="35"
+                    FontAttributes="Bold"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding ToggleTimerCommand}"
+                    BackgroundColor="{Binding ToggleButtonColor}"
+                    TextColor="{StaticResource LightTextColor}" 
+                    CornerRadius="4"/>
+        </ContentView>
+    </Grid>
+</ContentPage>

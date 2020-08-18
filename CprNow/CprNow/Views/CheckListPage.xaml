@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CprNow.Views.CheckListPage"
+             xmlns:vm="clr-namespace:CprNow.ViewModels"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             Title="Check List">
+
+    <Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Grid Padding="16,16,16,4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="32" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- #1 -->
+            <Label Text="1." 
+                   FontAttributes="Bold" 
+                   FontSize="24"
+                   TextColor="{StaticResource DarkTextColor}"/>
+
+            <Label Text="Explicitly direct someone to call 911"
+                   Grid.Column="1"
+                   FontSize="24" 
+                   TextColor="{StaticResource DarkTextColor}" />
+
+            <!-- #2 -->
+            <Label Text="2." 
+                   Grid.Row="1"
+                   FontAttributes="Bold" 
+                   FontSize="24"
+                   TextColor="{StaticResource DarkTextColor}"/>
+
+            <StackLayout Grid.Row="1"
+                         Grid.Column="1">
+                <Label Text="Assessment"
+                       FontSize="24"
+                       TextColor="{StaticResource DarkTextColor}" />
+
+                <Grid RowSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="24" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="-" FontSize="28" FontAttributes="Bold" />
+                    <Label Text="Unresponsive"
+                           Grid.Column="1"
+                           FontSize="24"
+                           TextColor="{StaticResource DarkTextColor}" />
+
+
+                    <Label Text="-" Grid.Row="1" FontSize="28" FontAttributes="Bold" />
+                    <Label Text="No breathing or no normal breathing"
+                           Grid.Row="1"
+                           Grid.Column="1"
+                           FontSize="24"
+                           TextColor="{StaticResource DarkTextColor}" />
+
+
+                    <Label Text="-" Grid.Row="2" FontSize="28" FontAttributes="Bold" />
+                    <Label Text="Head adjusted and throat has no blockage"
+                           Grid.Row="2"
+                           Grid.Column="1"
+                           FontSize="24"
+                           TextColor="{StaticResource DarkTextColor}" />
+
+
+                    <Label Text="-" Grid.Row="3" FontSize="28" FontAttributes="Bold" />
+                    <Label Text="No carotid pulse for 5 - 10 seconds"
+                           Grid.Row="3"
+                           Grid.Column="1"
+                           FontSize="24"
+                           TextColor="{StaticResource DarkTextColor}" />
+                </Grid>
+            </StackLayout>
+
+            <!-- #3 -->
+            <Label Text="3." 
+                       Grid.Row="2"
+                       FontAttributes="Bold" 
+                       FontSize="24"
+                       TextColor="{StaticResource DarkTextColor}"/>
+
+            <Label Text="Perform chest compression-only CPR"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   FontSize="24" 
+                   TextColor="{StaticResource DarkTextColor}" />
+
+        </Grid>
+
+        <ContentView Grid.Row="1">
+            <ffimageloadingsvg:SvgCachedImage WidthRequest="500" HeightRequest="500" Source="resource://CprNow.Resources.arrow-down-bold.svg" />
+        </ContentView>
+
+        <ContentView Grid.Row="2">
+            <Button Margin="8,0,8,8" 
+                    Text="Start CPR Now"
+                    FontSize="35"
+                    FontAttributes="Bold"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="GoToCprPage"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="{StaticResource LightTextColor}" 
+                    CornerRadius="4"/>
+        </ContentView>
+    </Grid>
+</ContentPage>

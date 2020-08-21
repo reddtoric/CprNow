@@ -10,12 +10,16 @@ namespace CprNow.Services
     public class SoundService : ISoundService
     {
         private readonly AudioManager audioManager;
-        private readonly MediaPlayer mediaPlayer;
+        private MediaPlayer mediaPlayer;
 
         public SoundService()
         {
             audioManager = (AudioManager)MainActivity.Instance.GetSystemService(Android.Content.Context.AudioService);
-            mediaPlayer = MediaPlayer.Create(global::Android.App.Application.Context, Resource.Drawable.beep);
+        }
+
+        public int GetVolume()
+        {
+            return audioManager.GetStreamVolume(Stream.Music);
         }
 
         public void PlayBeep()
@@ -32,11 +36,6 @@ namespace CprNow.Services
             view.PlaySoundEffect(SoundEffects.Click);
         }
 
-        public int GetVolume()
-        {
-            return audioManager.GetStreamVolume(Stream.Music);
-        }
-
         public void SetVolume(int volumePercentage, bool playSound)
         {
             int vol = audioManager.GetStreamMaxVolume(Stream.Music) * volumePercentage / 100;
@@ -49,6 +48,16 @@ namespace CprNow.Services
             {
                 PlayBeep();
             }
+        }
+
+        public void StartSoundService()
+        {
+            mediaPlayer = MediaPlayer.Create(global::Android.App.Application.Context, Resource.Raw.beep_short);
+        }
+
+        public void StopSoundService()
+        {
+            mediaPlayer.Release();
         }
     }
 }

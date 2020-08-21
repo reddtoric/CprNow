@@ -42,6 +42,7 @@ namespace CprNow.Droid
             // Auto set volume is set each time timer starts rather than here
 
             soundService = DependencyService.Get<ISoundService>();
+            soundService.StartSoundService();
             originalUserVolume = soundService.GetVolume();
 
             stopTimerService = DependencyService.Get<IStopTimerService>();
@@ -57,6 +58,8 @@ namespace CprNow.Droid
 
             SetVolumeToOriginalUserVol();
             stopTimerService.StopTimer();
+
+            soundService.StopSoundService();
         }
 
         protected override void OnPause()
@@ -65,6 +68,15 @@ namespace CprNow.Droid
 
             SetVolumeToOriginalUserVol();
             stopTimerService.StopTimer();
+
+            soundService.StopSoundService();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            soundService.StartSoundService();
         }
 
         private void SetVolumeToOriginalUserVol()

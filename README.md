@@ -32,6 +32,7 @@ Google Play and the Google Play logo are trademarks of Google LLC.
 - Xamarin.Forms
 - Xamarin.FFImageLoading.Svg.Forms
 - Newtonsoft.Json
+- Forms9Patch (Auto font size labels)
 
 ## To Do
 
@@ -60,12 +61,38 @@ Status | UR # | Description
 :heavy_check_mark: | 14 | Timestamp since BPM started for an estimate on when chest compression-only CPR started
 :heavy_check_mark: | 15 | Include liability/disclaimer
 :heavy_check_mark: | 16 | Auto set volume for audio cue
-:heavy_check_mark: | 17 | User can change the 'auto set volume' in settings. Default 90% / 80% of device's max.
+:heavy_check_mark: | 17 | User can change the 'auto set volume' in settings. Default 80% of device's max.
 :heavy_check_mark: | 18 | No advertisements
 :heavy_check_mark: | 19 | Free app
 :heavy_check_mark: | 20 | Available on Android
 :black_square_button: | 21 | Available on iOS
 :heavy_check_mark: | 22 | Display reminder of how deep, i.e. 2in./5cm deep or about 2 quarters wide
+
+## Testing
+
+Pass/Fail | # | Description
+--- | --- | ---
+:heavy_check_mark: | 1 | Saves CPM change (100, 105, 110, 115, 120)
+:heavy_check_mark: | 2 | Display correct CPM on main page and settings page
+:heavy_check_mark: | 3 | Visual and audio cue is ± 3cpm for 1 min using a tap tempo tool
+:heavy_check_mark: | 4 | Visual and audio cue is continuously on for 10 min for 100 CPM
+:heavy_check_mark: | 5 | CPM metronome starts when start button is pressed
+:heavy_check_mark: | 6 | CPM metronome stops when swiped to different page and start-end time is updated
+:heavy_check_mark: | 7 | CPM metronome stops when stop button is pressed and start-end time is updated
+:heavy_check_mark: | 8 | CPM metronome stops when app is paused and start-end time is updated
+:heavy_check_mark: | 9 | CPM metronome stops when app is closed and start-end time is updated
+:heavy_check_mark: | 10 | Save start-end time
+:heavy_check_mark: | 11 | Display correct start time on main page (same time displayed on phone)
+:heavy_check_mark: | 12 | Display the last start-end time as the first entry in history
+:heavy_check_mark: | 13 | Display up to 10 most recent start-end time in history in reverse chronological order
+:heavy_check_mark: | 14 | Saves auto set volume
+:heavy_check_mark: | 15 | Sets auto set volume when CPM metronome is on
+:heavy_check_mark: | 16 | Sets volume back to user's original volume level on app pause (app in background but not terminated)
+:heavy_check_mark: | 17 | Sets volume back to user's original volume level on app close (app termination)
+:heavy_check_mark: | 18 | Start CPR Now button on check list brings user to main page
+:heavy_check_mark: | 19 | App works in airplane mode
+:heavy_check_mark: | 20 | Disclaimer is displayed in settings page
+:heavy_check_mark: | 21 | Disclaimer is displayed on initial app startup requiring user input. If user is disagrees, app closes. If user agrees, disclaimer modal closes and does not appear.
 
 ## Prototype
 

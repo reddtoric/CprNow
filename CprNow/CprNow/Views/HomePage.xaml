@@ -46,7 +46,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <FormattedString.Spans>
-                            <Span Text="Latest start:&#10;" />
+                            <Span Text="Started:&#10;" />
                             <Span Text="{Binding LatestStartTime}" />
                         </FormattedString.Spans>
                     </FormattedString>

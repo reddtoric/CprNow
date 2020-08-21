@@ -7,6 +7,7 @@ namespace CprNow.ViewModels
 {
     public class CprViewModel : BaseViewModel
     {
+        private const int msAdjust = 21;
         private const int delayInbetween = 100;
         private const double handsDown = 0.8;
         private const double handsNormal = 1.0;
@@ -145,7 +146,7 @@ namespace CprNow.ViewModels
                 // Ensure audio is heard every time
                 soundService.SetVolume(preferenceSettings.GetAutoSetVolume(), false);
 
-                cpmInMs = (60000 / preferenceSettings.GetCpm()) - delayInbetween;
+                cpmInMs = (60000 / preferenceSettings.GetCpm()) - delayInbetween - msAdjust;
 
                 while (loop)
                 {

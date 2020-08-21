@@ -61,19 +61,15 @@
     <EnableLLVM>false</EnableLLVM>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <BundleAssemblies>false</BundleAssemblies>
-    <AndroidPackageFormat>aab</AndroidPackageFormat>
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
-    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidKeyStore>true</AndroidKeyStore>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
-    <AndroidSigningKeyStore>
-    </AndroidSigningKeyStore>
-    <AndroidSigningStorePass>
-    </AndroidSigningStorePass>
-    <AndroidSigningKeyAlias>
-    </AndroidSigningKeyAlias>
-    <AndroidSigningKeyPass>
-    </AndroidSigningKeyPass>
+    <AndroidSigningKeyStore>D:\!Important\EdDevs Keystore\eddevs.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>Vk2o9a;%mqr*lkas{#212685Tkriouhgz&gt;09^@!</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>cpr</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>thispasswordforcprissoso-kindofunnecessary</AndroidSigningKeyPass>
     <MandroidI18n />
     <AndroidLinkSkip>
     </AndroidLinkSkip>
@@ -155,6 +151,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Forms9Patch">
+      <Version>2.4.2</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
@@ -205,21 +204,15 @@
     <AndroidResource Include="Resources\drawable\chest_vector.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\beep.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\cpr_hands_thick.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\cpr_hands_thick_red.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\cpr_hands_thick_black.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\CustomDialog.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\raw\beep_short.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

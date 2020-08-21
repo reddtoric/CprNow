@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CprNow.Views.CheckListPage"
-             xmlns:vm="clr-namespace:CprNow.ViewModels"
+             xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              Title="Check List">
 
@@ -16,102 +16,132 @@
             <RowDefinition Height="100" />
         </Grid.RowDefinitions>
 
-        <Grid Padding="16,16,16,4">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
+        <ScrollView>
+            <Grid Padding="16,16,16,4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="32" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="32" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-            <!-- #1 -->
-            <Label Text="1." 
+                <!-- #1 -->
+                <f9p:Label Text="1." 
                    FontAttributes="Bold" 
-                   FontSize="24"
+                   FontSize="20"
                    TextColor="{StaticResource DarkTextColor}"/>
 
-            <Label Text="Explicitly direct someone to call 911"
+                <f9p:Label Text="Explicitly direct someone to call 911"
                    Grid.Column="1"
-                   FontSize="24" 
+                   Lines="0"
+                   AutoFit="None"
+                   MinFontSize="18" 
+                   FontSize="24"
+                   HeightRequest="58"
                    TextColor="{StaticResource DarkTextColor}" />
 
-            <!-- #2 -->
-            <Label Text="2." 
+                <!-- #2 -->
+                <f9p:Label Text="2." 
                    Grid.Row="1"
                    FontAttributes="Bold" 
-                   FontSize="24"
+                   FontSize="20"
                    TextColor="{StaticResource DarkTextColor}"/>
 
-            <StackLayout Grid.Row="1"
+                <StackLayout Grid.Row="1"
                          Grid.Column="1">
-                <Label Text="Assessment"
-                       FontSize="24"
-                       TextColor="{StaticResource DarkTextColor}" />
+                    <f9p:Label Text="Assessment"
+                               Lines="0"
+                               AutoFit="None"
+                               MinFontSize="18" 
+                               FontSize="24"
+                               HeightRequest="24"
+                               TextColor="{StaticResource DarkTextColor}" />
 
-                <Grid RowSpacing="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="24" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="24" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
 
-                    <Label Text="-" FontSize="28" FontAttributes="Bold" />
-                    <Label Text="Unresponsive"
+                        <f9p:Label Text="-" FontSize="28" FontAttributes="Bold" />
+                        <f9p:Label Text="Unresponsive"
                            Grid.Column="1"
+                           Lines="0"
+                           AutoFit="None"
+                           MinFontSize="18" 
                            FontSize="24"
+                           HeightRequest="24"
                            TextColor="{StaticResource DarkTextColor}" />
 
 
-                    <Label Text="-" Grid.Row="1" FontSize="28" FontAttributes="Bold" />
-                    <Label Text="No breathing or no normal breathing"
+                        <f9p:Label Text="-" Grid.Row="1" FontSize="28" FontAttributes="Bold" />
+                        <f9p:Label Text="No breathing or no normal breathing"
                            Grid.Row="1"
                            Grid.Column="1"
-                           FontSize="24"
+                   Lines="0"
+                   AutoFit="None"
+                   MinFontSize="18" 
+                   FontSize="24"
+                   HeightRequest="58"
                            TextColor="{StaticResource DarkTextColor}" />
 
 
-                    <Label Text="-" Grid.Row="2" FontSize="28" FontAttributes="Bold" />
-                    <Label Text="Head adjusted and throat has no blockage"
+                        <f9p:Label Text="-" Grid.Row="2" FontSize="28" FontAttributes="Bold" />
+                        <f9p:Label Text="Head adjusted and throat has no blockage"
                            Grid.Row="2"
                            Grid.Column="1"
-                           FontSize="24"
+                   Lines="0"
+                   AutoFit="None"
+                   MinFontSize="18" 
+                   FontSize="24"
+                   HeightRequest="58"
                            TextColor="{StaticResource DarkTextColor}" />
 
 
-                    <Label Text="-" Grid.Row="3" FontSize="28" FontAttributes="Bold" />
-                    <Label Text="No carotid pulse for 5 - 10 seconds"
+                        <f9p:Label Text="-" Grid.Row="3" FontSize="28" FontAttributes="Bold" />
+                        <f9p:Label Text="No carotid pulse for 5 - 10 seconds"
                            Grid.Row="3"
                            Grid.Column="1"
-                           FontSize="24"
+                   Lines="0"
+                   AutoFit="None"
+                   MinFontSize="18" 
+                   FontSize="24"
+                   HeightRequest="58"
                            TextColor="{StaticResource DarkTextColor}" />
-                </Grid>
-            </StackLayout>
+                    </Grid>
+                </StackLayout>
 
-            <!-- #3 -->
-            <Label Text="3." 
+                <!-- #3 -->
+                <f9p:Label Text="3." 
                        Grid.Row="2"
                        FontAttributes="Bold" 
-                       FontSize="24"
+                   FontSize="20"
                        TextColor="{StaticResource DarkTextColor}"/>
 
-            <Label Text="Perform chest compression-only CPR"
+                <f9p:Label Text="Perform chest compression-only CPR"
                    Grid.Row="2"
                    Grid.Column="1"
-                   FontSize="24" 
+                   Lines="0"
+                   AutoFit="None"
+                   MinFontSize="18" 
+                   FontSize="24"
+                   HeightRequest="58"
                    TextColor="{StaticResource DarkTextColor}" />
 
-        </Grid>
-
+            </Grid>
+        </ScrollView>
+        
         <ContentView Grid.Row="1">
             <ffimageloadingsvg:SvgCachedImage WidthRequest="500" HeightRequest="500" Source="resource://CprNow.Resources.arrow-down-bold.svg" />
         </ContentView>

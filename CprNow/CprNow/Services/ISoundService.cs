@@ -2,12 +2,16 @@
 {
     public interface ISoundService
     {
+        int GetVolume();
+
         void PlayBeep();
 
         void PlayClick();
 
-        int GetVolume();
-
         void SetVolume(int volumePercentage, bool playSound);
+
+        void StartSoundService();
+
+        void StopSoundService();
     }
 }

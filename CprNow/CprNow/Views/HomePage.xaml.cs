@@ -1,9 +1,5 @@
-﻿using System;
-using System.ComponentModel;
-using CprNow.Services;
-using CprNow.ViewModels;
+﻿using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace CprNow.Views
 {
@@ -13,7 +9,6 @@ namespace CprNow.Views
         public HomePage()
         {
             InitializeComponent();
-
         }
 
         protected override void OnDisappearing()

@@ -1,10 +1,6 @@
-﻿using System.Collections.Generic;
-using Android.App;
-using Android.Views;
-using Android.Widget;
+﻿using Android.App;
 using CprNow.Custom;
 using CprNow.Droid.Implementation;
-
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(YesNoPopupLoader))]
@@ -15,8 +11,8 @@ namespace CprNow.Droid.Implementation
     {
         public void ShowPopup(CustomYesNoBox popup)
         {
-            var alert = new AlertDialog.Builder(MainActivity.Instance);
-            
+            var alert = new AlertDialog.Builder(MainActivity.Instance, Resource.Style.Theme_AppCompat_Light_Dialog_Alert);
+
             alert.SetTitle(popup.Title);
             alert.SetMessage(popup.Text);
 

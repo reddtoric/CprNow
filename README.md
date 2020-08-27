@@ -1,6 +1,6 @@
 # CPR Now
 
-Chest compression-only CPR assistant for mobile.
+Chest compression-only CPR assistant for mobile. Assisting user with audio and visual cues in 2 button presses. Available for USA/Canada.
 
 **Features:**
 

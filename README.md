@@ -1,6 +1,6 @@
 # CPR Now
 
-Hands-only (chest compression-only) CPR assistant for mobile. Assisting user with audio and visual cues in 2 button presses. Available for USA/Canada.
+Hands-only (chest compression-only) CPR assistant for mobile. Assisting user with audio and visual cues in 2 button presses (3 taps: App open, 'Start CPR Now' from checklist, 'Start' timer). Available for USA/Canada.
 
 **Features:**
 

@@ -60,7 +60,7 @@
                       Grid.ColumnSpan="2"
                       Padding="16,2,16,4"
                       VerticalOptions="FillAndExpand">
-            <Image Source="chest_vector.png" 
+            <Image Source="chest_vector_2.png" 
                    VerticalOptions="CenterAndExpand" />
         </ContentView>
 

@@ -1,14 +1,14 @@
 # CPR Now
 
-Chest compression-only CPR assistant for mobile. Assisting user with audio and visual cues in 2 button presses. Available for USA/Canada.
+Hands-only (chest compression-only) CPR assistant for mobile. Assisting user with audio and visual cues in 2 button presses. Available for USA/Canada.
 
 **Features:**
 
-- 100-120 cpm setting
 - Visual and audio cues
+- Completely offline
 - CPR check list
 - Compression depth reminder
-- Completely offline
+- 100-120 CPM setting
 - Last 10 start-end time
 - Auto sets phone volume so audio cue is heard while giving CPR
 - Auto sets phone's volume back to user's volume setting when app is closed or paused
@@ -47,7 +47,7 @@ Status | UR # | Description
 :heavy_check_mark: | 2 | Language in English
 :heavy_check_mark: | 3 | Follow color-related visual impairment guidelines by WCAG, 4.5:1 contrast ratio
 :heavy_check_mark: | 4 | 14pt font or greater
-:heavy_check_mark: | 5 | No quick flashing, seizure inducing, elements. 100 - 120 cpm = 1.67 - 2 Hz which is under 3 Hz and is uncommon to trigger seizure.
+:heavy_check_mark: | 5 | No quick flashing, seizure inducing, elements. 100 - 120 CPM = 1.67 - 2 Hz which is under 3 Hz and is uncommon to trigger seizure.
 :heavy_check_mark: | 6 | A small, compared to screen, flashing/pulsating indicator for BPM. Indicator can not be more than 25% of screen area at typical viewing distances (Mozilla web accessibility).
 :heavy_check_mark: | 7 | Image showing placement of hands on chest
 :heavy_check_mark: | 8a | Audio cue for every compression

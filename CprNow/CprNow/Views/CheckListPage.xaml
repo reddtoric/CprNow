@@ -35,13 +35,13 @@
                    FontSize="20"
                    TextColor="{StaticResource DarkTextColor}"/>
 
-                <f9p:Label Text="Explicitly direct someone to call 911"
+                <f9p:Label Text="Call 911 (or direct someone)"
                    Grid.Column="1"
                    Lines="0"
                    AutoFit="None"
                    MinFontSize="18" 
                    FontSize="24"
-                   HeightRequest="58"
+                   HeightRequest="36"
                    TextColor="{StaticResource DarkTextColor}" />
 
                 <!-- #2 -->
@@ -58,7 +58,7 @@
                                AutoFit="None"
                                MinFontSize="18" 
                                FontSize="24"
-                               HeightRequest="24"
+                               HeightRequest="36"
                                TextColor="{StaticResource DarkTextColor}" />
 
                     <Grid RowSpacing="0">
@@ -75,7 +75,7 @@
                         </Grid.ColumnDefinitions>
 
                         <f9p:Label Text="-" FontSize="28" FontAttributes="Bold" />
-                        <f9p:Label Text="Unresponsive"
+                        <f9p:Label Text="Not responsive"
                            Grid.Column="1"
                            Lines="0"
                            AutoFit="None"
@@ -86,7 +86,7 @@
 
 
                         <f9p:Label Text="-" Grid.Row="1" FontSize="28" FontAttributes="Bold" />
-                        <f9p:Label Text="No breathing or no normal breathing"
+                        <f9p:Label Text="Not breathing or abnormal breathing"
                            Grid.Row="1"
                            Grid.Column="1"
                    Lines="0"
@@ -98,14 +98,14 @@
 
 
                         <f9p:Label Text="-" Grid.Row="2" FontSize="28" FontAttributes="Bold" />
-                        <f9p:Label Text="Head adjusted and throat has no blockage"
+                        <f9p:Label Text="Clear airway"
                            Grid.Row="2"
                            Grid.Column="1"
                    Lines="0"
                    AutoFit="None"
                    MinFontSize="18" 
                    FontSize="24"
-                   HeightRequest="58"
+                   HeightRequest="24"
                            TextColor="{StaticResource DarkTextColor}" />
 
 
@@ -129,14 +129,14 @@
                    FontSize="20"
                        TextColor="{StaticResource DarkTextColor}"/>
 
-                <f9p:Label Text="Perform chest compression-only CPR"
+                <f9p:Label Text="Hands-only CPR"
                    Grid.Row="2"
                    Grid.Column="1"
                    Lines="0"
                    AutoFit="None"
                    MinFontSize="18" 
                    FontSize="24"
-                   HeightRequest="58"
+                   HeightRequest="36"
                    TextColor="{StaticResource DarkTextColor}" />
 
             </Grid>

@@ -22,6 +22,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
@@ -31,11 +32,13 @@
 
                 <!-- #1 -->
                 <f9p:Label Text="1." 
+                   Grid.Row="0"
                    FontAttributes="Bold" 
                    FontSize="20"
                    TextColor="{StaticResource DarkTextColor}"/>
 
                 <f9p:Label Text="Call 911 (or direct someone)"
+                   Grid.Row="0"
                    Grid.Column="1"
                    Lines="0"
                    AutoFit="None"
@@ -44,14 +47,31 @@
                    HeightRequest="36"
                    TextColor="{StaticResource DarkTextColor}" />
 
-                <!-- #2 -->
+                <!-- #Covid Compliant -->
                 <f9p:Label Text="2." 
                    Grid.Row="1"
                    FontAttributes="Bold" 
                    FontSize="20"
                    TextColor="{StaticResource DarkTextColor}"/>
 
-                <StackLayout Grid.Row="1"
+                <f9p:Label Text="Cover yours &amp; person's nose &amp; mouth with face mask or cloth"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Lines="0"
+                   AutoFit="None"
+                   MinFontSize="18" 
+                   FontSize="24"
+                   HeightRequest="58"
+                   TextColor="{StaticResource DarkTextColor}" />
+
+                <!-- #2 -> #3 -->
+                <f9p:Label Text="3." 
+                   Grid.Row="2"
+                   FontAttributes="Bold" 
+                   FontSize="20"
+                   TextColor="{StaticResource DarkTextColor}"/>
+
+                <StackLayout Grid.Row="2"
                          Grid.Column="1">
                     <f9p:Label Text="Assessment"
                                Lines="0"
@@ -122,15 +142,15 @@
                     </Grid>
                 </StackLayout>
 
-                <!-- #3 -->
-                <f9p:Label Text="3." 
-                       Grid.Row="2"
+                <!-- #3 -> #4 -->
+                <f9p:Label Text="4." 
+                       Grid.Row="3"
                        FontAttributes="Bold" 
                    FontSize="20"
                        TextColor="{StaticResource DarkTextColor}"/>
 
                 <f9p:Label Text="Hands-only CPR"
-                   Grid.Row="2"
+                   Grid.Row="3"
                    Grid.Column="1"
                    Lines="0"
                    AutoFit="None"

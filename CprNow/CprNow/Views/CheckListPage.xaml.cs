@@ -42,7 +42,18 @@ namespace CprNow.Views
                     }
                     else if (closedArgs.Button == disagree)
                     {
-                        System.Environment.Exit(0);
+                        //System.Environment.Exit(0);
+
+                        // If doesn't work, hang the app with Environment.Exit()
+                        IQuitAppService quitAppService = DependencyService.Get<IQuitAppService>();
+                        if (quitAppService != null)
+                        {
+                            quitAppService.Quit();
+                        }
+                        else
+                        {
+                            System.Environment.Exit(0);
+                        }
                     }
                     else
                     {

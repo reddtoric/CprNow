@@ -47,31 +47,14 @@
                    HeightRequest="36"
                    TextColor="{StaticResource DarkTextColor}" />
 
-                <!-- #Covid Compliant -->
+                <!-- #2 -->
                 <f9p:Label Text="2." 
                    Grid.Row="1"
                    FontAttributes="Bold" 
                    FontSize="20"
                    TextColor="{StaticResource DarkTextColor}"/>
 
-                <f9p:Label Text="Cover yours &amp; person's nose &amp; mouth with face mask or cloth"
-                   Grid.Row="1"
-                   Grid.Column="1"
-                   Lines="0"
-                   AutoFit="None"
-                   MinFontSize="18" 
-                   FontSize="24"
-                   HeightRequest="58"
-                   TextColor="{StaticResource DarkTextColor}" />
-
-                <!-- #2 -> #3 -->
-                <f9p:Label Text="3." 
-                   Grid.Row="2"
-                   FontAttributes="Bold" 
-                   FontSize="20"
-                   TextColor="{StaticResource DarkTextColor}"/>
-
-                <StackLayout Grid.Row="2"
+                <StackLayout Grid.Row="1"
                          Grid.Column="1">
                     <f9p:Label Text="Assessment"
                                Lines="0"
@@ -141,6 +124,23 @@
                            TextColor="{StaticResource DarkTextColor}" />
                     </Grid>
                 </StackLayout>
+
+                <!-- #Covid Compliant -->
+                <f9p:Label Text="3." 
+                   Grid.Row="2"
+                   FontAttributes="Bold" 
+                   FontSize="20"
+                   TextColor="{StaticResource DarkTextColor}"/>
+
+                <f9p:Label Text="Cover yours &amp; person's nose &amp; mouth with face mask or cloth"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Lines="0"
+                   AutoFit="None"
+                   MinFontSize="18" 
+                   FontSize="24"
+                   HeightRequest="58"
+                   TextColor="{StaticResource DarkTextColor}" />
 
                 <!-- #3 -> #4 -->
                 <f9p:Label Text="4." 

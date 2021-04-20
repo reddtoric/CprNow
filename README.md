@@ -4,6 +4,7 @@ Hands-only (chest compression-only) CPR assistant for mobile. Assisting user wit
 
 **Features:**
 
+- From app open to start in 3 taps
 - Visual and audio cues
 - Completely offline
 - CPR check list
@@ -17,12 +18,14 @@ Hands-only (chest compression-only) CPR assistant for mobile. Assisting user wit
 
 Google Play and the Google Play logo are trademarks of Google LLC.
 
-## Screenshots
+## Screenshots/Gif
 
 <p float="left">
+  <img src="https://media.giphy.com/media/4jlB2BXw4u7rZkn2vk/giphy.gif" alt="GIF of CPR Now" />
+  <br/>
   <img src="/images/1 check list.png" alt="CPR check list" width="200px" />
   <img src="/images/2 ui.png" alt="Main page: CPR cpm/bpm timer" width="200px" />
-  <img src="/images/4 cues.png" alt="CPR timer started and screenshotted on beat" width="200px" />
+  <img src="/images/3 cues.png" alt="CPR timer started and screenshotted on beat" width="200px" />
 </p>
 
 ## Frameworks/Libraries used

@@ -30,7 +30,7 @@ Google Play and the Google Play logo are trademarks of Google LLC.
 
 ## Frameworks/Libraries used
 
-- .NET Standard
+- .NET
 - Xamarin.Essentials
 - Xamarin.Forms
 - Xamarin.FFImageLoading.Svg.Forms

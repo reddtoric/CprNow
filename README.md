@@ -1,5 +1,7 @@
 # CPR Now
 
+*** Revisiting this project because I'm not satisfied with how the app looks and mainly the code behind it. I will be using Angular(2+), Capacitor, and Ionic for learning experience.
+
 Hands-only (chest compression-only) CPR assistant for mobile. Assisting user with audio and visual cues in 2 button presses (3 taps: App open, 'Start CPR Now' from checklist, 'Start' timer). Available for USA/Canada.
 
 **Features:**

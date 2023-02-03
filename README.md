@@ -20,6 +20,8 @@ Hands-only (chest compression-only) CPR assistant for mobile. Assisting user wit
 
 Google Play and the Google Play logo are trademarks of Google LLC.
 
+* Face covering step was added in consideration for COVID
+
 ## Screenshots/Gif
 
 <p float="left">
